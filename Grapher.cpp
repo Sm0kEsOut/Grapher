@@ -34,15 +34,24 @@ void DrawPieChart(HDC hdc, const GraphData& graphData) {
         total += value;
     }
 
+    if (total == 0) return;
+
     int startAngle = 0;
     int radius = 100;
+    int centerX = 200;
+    int centerY = 200;
+
     for (int value : graphData.dataPoints) {
-        int sweepAngle = (value * 360) / total;
-        Pie(hdc, 100, 100, 100 + radius * 2, 100 + radius * 2,
-            100 + radius + radius * cos(startAngle * 3.14159 / 180),
-            100 + radius - radius * sin(startAngle * 3.14159 / 180),
-            100 + radius + radius * cos((startAngle + sweepAngle) * 3.14159 / 180),
-            100 + radius - radius * sin((startAngle + sweepAngle) * 3.14159 / 180));
+        int sweepAngle = static_cast<int>(round((value * 360.0) / total));
+
+        int endAngle = startAngle + sweepAngle;
+
+        Pie(hdc, centerX - radius, centerY - radius, centerX + radius, centerY + radius,
+            centerX + radius * cos(startAngle * 3.14159 / 180.0),
+            centerY - radius * sin(startAngle * 3.14159 / 180.0),
+            centerX + radius * cos(endAngle * 3.14159 / 180.0),
+            centerY - radius * sin(endAngle * 3.14159 / 180.0));
+
         startAngle += sweepAngle;
     }
 }
