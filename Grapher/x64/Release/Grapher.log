@@ -1,0 +1,12 @@
+﻿  Grapher.cpp
+D:\Graphing Project\Grapher\Grapher.cpp(17,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Graphing Project\Grapher\Grapher.cpp(25,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Graphing Project\Grapher\Grapher.cpp(45,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Graphing Project\Grapher\Grapher.cpp(44,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Graphing Project\Grapher\Grapher.cpp(43,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\Graphing Project\Grapher\Grapher.cpp(42,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+D:\Graphing Project\Grapher\Grapher.cpp(79): error C4700: uninitialized local variable 'hwnd' used
+  All 209 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+LINK : fatal error LNK1257: code generation failed
